@@ -150,7 +150,7 @@ ruff check sample_sizer/
 
 ## Part of the CPR Ecosystem
 
-`sample-sizer` is **Tool 21** in the [CPR Orbital](https://github.com/kgkazakos) 40-tool series — a portfolio of open-source Python tools for AI-native product research, shipping every Friday from March to December 2026.
+`sample-sizer` is **Tool 21** in the [CPR Orbital](https://github.com/kgkazakos) 40-tool series — a portfolio of open-source Python tools for AI-native product research, shipping almost daily from March to December 2026.
 
 **Related tools:**
 - [`guide-scorer`](https://github.com/kgkazakos/guide-scorer) — score discussion guides before you run the study that needs this sample
