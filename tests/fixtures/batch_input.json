@@ -1,0 +1,7 @@
+[
+  {"method": "interviews", "homogeneity": "mixed", "study_goal": "Understand onboarding friction"},
+  {"method": "survey", "confidence_level": 0.95, "margin_of_error": 0.05, "population_size": 5000},
+  {"method": "usability_test", "usability_goal": "formative"},
+  {"method": "ab_test", "effect_size": "medium", "power": 0.80},
+  {"method": "focus_groups", "homogeneity": "heterogeneous"}
+]

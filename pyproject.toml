@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sample-sizer"
+version = "0.1.0"
+description = "AI-assisted sample size calculator for product research — 10 methods, power curves, LLM narratives"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Kostas Kazakos", email = "kostas@cpr.tools" }]
+requires-python = ">=3.10"
+keywords = ["ux-research", "sample-size", "power-analysis", "computational-product-research", "ai"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "click>=8.1",
+    "rich>=13.0",
+]
+
+[project.optional-dependencies]
+llm = [
+    "dspy-ai>=2.4",
+]
+app = [
+    "streamlit>=1.32",
+    "plotly>=5.18",
+]
+dev = [
+    "pytest>=7.4",
+    "ruff>=0.4",
+]
+all = [
+    "sample-sizer[llm,app,dev]",
+]
+
+[project.scripts]
+sample-sizer = "sample_sizer.cli:cli"
+
+[project.urls]
+Homepage = "https://github.com/kgkazakos/sample-sizer"
+Repository = "https://github.com/kgkazakos/sample-sizer"
+"CPR Ecosystem" = "https://github.com/kgkazakos"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["sample_sizer*"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+
+[tool.ruff.lint.per-file-ignores]
+"sample_sizer/app.py" = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
